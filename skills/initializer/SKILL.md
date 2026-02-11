@@ -184,13 +184,13 @@ This skill enables agents to synchronize and merge their capabilities, creating 
 ## Installation
 
 ### Prerequisites
-- OpenClaw agent with skill support
+- Agent system with skill/extension support
 - Network connectivity for external agent communication
 - Sufficient permissions for system integration
 
 ### Installation Command
 ```bash
-openclaw skills install https://github.com/Omni-NexusAI/openclaw-initializer.git
+openclaw skills install https://github.com/Omni-NexusAI/initializer.git
 ```
 
 ### Configuration
