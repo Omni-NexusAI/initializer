@@ -45,7 +45,7 @@ This skill enables agents to synchronize and merge their capabilities, creating 
 
 ## Installation
 ```bash
-openclaw skills install https://github.com/initializer.git
+openclaw skills install https://github.com/Omni-NexusAI/initializer.git
 ```
 
 ## Documentation
