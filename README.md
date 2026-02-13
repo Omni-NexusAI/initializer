@@ -1,4 +1,4 @@
-# OpenClaw Initializer Skill 🧠
+# Initializer Skill 🧠
 
 **An advanced agent synchronization and capability merging skill for creating intelligent multi-agent systems**
 
@@ -247,19 +247,18 @@ This skill is released under the MIT License. See [LICENSE](LICENSE) for details
 ## 🔗 Links
 
 - **Repository**: https://github.com/Omni-NexusAI/initializer
-- **OpenClaw Documentation**: https://docs.openclaw.ai
-- **Community**: https://discord.com/invite/clawd
 - **Issue Tracker**: https://github.com/Omni-NexusAI/initializer/issues
+- **Community Discussions**: https://github.com/Omni-NexusAI/initializer/discussions
 
 ## 💡 Support
 
 - **Documentation**: Check [SKILL.md](SKILL.md) for detailed information
 - **Examples**: See [EXAMPLES.md](EXAMPLES.md) for use cases
 - **Issues**: Report bugs on [GitHub Issues](https://github.com/Omni-NexusAI/initializer/issues)
-- **Community**: Join the [OpenClaw Discord](https://discord.com/invite/clawd) for community support
+- **Community**: Join the [GitHub Discussions](https://github.com/Omni-NexusAI/initializer/discussions) for community support
 
 ---
 
-**Built with ❤️ by the OpenClaw Community**
+**Built with ❤️ by the AI Agent Community**
 
 *Creating the future of multi-agent systems, one brain at a time.*
