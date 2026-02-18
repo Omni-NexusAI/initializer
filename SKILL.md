@@ -1,3 +1,15 @@
+---
+name: initializer
+description: Synchronize and merge agent capabilities for networked agent-mind systems
+metadata:
+  {
+    "openclaw":
+      {
+        "emoji": "🔗",
+      },
+  }
+---
+
 # Initializer Skill
 
 This skill enables agents to synchronize and merge their capabilities, creating networked 'agent-mind' systems by synchronizing two agents acting as complementary brain hemispheres.
