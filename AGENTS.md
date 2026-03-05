@@ -227,6 +227,46 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
+## 🎙️ Voice Message Handling
+
+When you receive a voice message (indicated by `[media attached: ... .ogg]` or similar audio format in the message), you MUST:
+
+1. **Transcribe the audio** using whisper:
+   ```bash
+   python -c "import whisper; model = whisper.load_model('tiny'); result = model.transcribe('<audio_path>'); print(result['text'])"
+   ```
+
+2. **Process the text** and generate your response as usual.
+
+3. **Respond with BOTH voice and text** - this is the default behavior for voice input:
+   - Use the `tts` tool to generate audio
+   - Convert to OGG format for Telegram: `ffmpeg -i <input> -c:a libopus -b:a 64k <output.ogg>`
+   - Send via `message` tool with both `message` (text) and `media` (audio path)
+
+4. **NEVER respond with text-only** to a voice message unless the user explicitly requests "voice-only".
+
+### Input Type Detection
+
+| Input Type | Indicator | Response |
+|------------|-----------|----------|
+| Voice message | `[media attached: ... .ogg]` or `.mp3`, `.wav` | Voice + Text |
+| Text message | No audio attachment | Text only (unless user asks for voice) |
+
+### Example Flow
+
+```
+User: [media attached: file_18.ogg] <audio>
+
+Agent:
+1. Transcribe: whisper file_18.ogg -> "What's the weather?"
+2. Generate response: "It's 72°F and sunny!"
+3. TTS: tts tool -> MEDIA:C:\temp\voice.mp3
+4. Convert: ffmpeg -i voice.mp3 -c:a libopus response.ogg
+5. Send: message tool with text + media
+```
+
+**Remember:** The `[media attached: ...]` line in your input means the user sent audio. Respond accordingly!
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
